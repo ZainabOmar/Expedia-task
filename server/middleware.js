@@ -5,7 +5,7 @@ var request = require('request');
 
 module.exports = function (app, express) {
 
-  app.use(morgan('combined'));
+  app.use(morgan('dev'));
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use('/static',  express.static(__dirname + '../client'));

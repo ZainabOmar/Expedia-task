@@ -10,7 +10,8 @@
     "request": "^2.79.0"
   },
   "devDependencies": {
-    "eslint": "^3.16.1"
+    "eslint": "^3.16.1",
+    "nodemon": "^1.11.0"
   },
   "scripts": {
     "start": "node server/server.js",
