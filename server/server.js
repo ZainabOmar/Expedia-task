@@ -6,7 +6,7 @@ var app = express();
 
 require('./middleware.js')(app, express);
 
-app.get('api/getByCity', handlers.getDataByCity);
+app.get('/api/destination', handlers.getByDestination);
 
 app.listen(process.env.PORT || port);
 

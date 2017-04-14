@@ -7,7 +7,8 @@
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "morgan": "^1.8.1",
-    "request": "^2.79.0"
+    "node-fetch": "^1.6.3",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "eslint": "^3.16.1",
