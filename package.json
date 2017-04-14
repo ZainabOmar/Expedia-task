@@ -1,0 +1,25 @@
+{
+  "name": "Expedia-task",
+  "version": "3.10.10",
+  "description": "Creating simple site that consumes Expedia's API as a server-side call",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZainabOmar/Expedia-task"
+  },
+  "author": "Zainab Hammami",
+  "license": "UNLICENSED"
+}
