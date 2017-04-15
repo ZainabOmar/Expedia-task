@@ -6,7 +6,7 @@ var app = express();
 
 require('./middleware.js')(app, express);
 
-app.get('/api/destination', handlers.getByDestination);
+app.get('/api/expedia', handlers.getByDestination);
 
 app.listen(process.env.PORT || port);
 
