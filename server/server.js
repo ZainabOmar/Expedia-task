@@ -6,8 +6,9 @@ var app = express();
 
 require('./middleware.js')(app, express);
 
-app.get('/api/expedia', handlers.getByDestination);
+app.get('/api/getByDestination', handlers.getByDestination);
+app.get('/api/getMinTripStartDate', handlers.getMinTripStartDate);
 
-server.listen(port, function() {
+app.listen(port, function() {
     console.log("App is running on port " + port);
 });

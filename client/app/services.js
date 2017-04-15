@@ -6,10 +6,10 @@ angular.module('expedia.services', [])
     getByDestination : function(){
       return $http({
         method: 'GET',
-        url: '/api/expedia',
+        url: '/api/getByDestination',
       })
       .then(function (res) {
-        console.log(res);
+        console.log(res.offers);
         return res;
       })
       .catch(function(err){
