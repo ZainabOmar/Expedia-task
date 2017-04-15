@@ -3,18 +3,18 @@ angular.module('expedia.services', [])
 .factory('Expedia', function ($http) {
   return {
 
-    getByDestination : function(){
+    getByDestination : function(city){
       return $http({
-        method: 'GET',
+        method: 'POST',
         url: '/api/getByDestination',
+        data: city
       })
       .then(function (res) {
         return res;
       })
       .catch(function(err){
         if(err) {
-          console.log(err);
-          throw err;
+          return {status:500};
         }
       });
     }

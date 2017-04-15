@@ -1,5 +1,28 @@
-<div class="container" ng-controller="MainController">
+<div class="container" ng-controller = "MainController">
 	<h1><center>Welcome To Expedia Website</center></h1>
-	<h3 ng-model = "getByDestination()">Filter By Destination <span class="glyphicon glyphicon-hand-right"></span></h3>
-	<p ng-repeat = "city in data track by $index">{{city}}</p>
+	<h3>Which City Are You Looking For?! </h3>
+	<label for="city">City Name:</label>
+	<br>
+	<input type="text" placeholder="city name" ng-model = "destination.city">
+	<input type="submit" value="Search" ng-click="search()">
+	<ul>
+		<li ng-repeat = "city in data track by $index">
+			<p>City: {{city.destination.city}}</p>
+			<p>Country: {{city.destination.country}}</p>
+			<p>Travel Start Date: {{city.offerDateRange.travelStartDate}}</p>
+			<p>Travel End Date: {{city.offerDateRange.travelEndDate}}</p>
+			<p>Length Of Stay: {{city.offerDateRange.lengthOfStay}}</p>
+			<p>Hotel Name: {{city.hotelInfo.hotelName}}</p>
+			<center><img ng-src= {{city.hotelInfo.hotelImageUrl}} alt="Description" /></center>
+			<p>Hotel Destination: {{city.hotelInfo.hotelLongDestination}}</p>
+			<p>Hotel Address: {{city.hotelInfo.hotelStreetAddress}}</p>
+			<p>Hotel City: {{city.hotelInfo.hotelCity}}</p>
+			<p>Hotel Province: {{city.hotelInfo.hotelProvince}}</p>
+			<p>Description: {{city.hotelInfo.description}}</p>
+			<p>Total Price: {{city.hotelPricingInfo.totalPriceValue}}</p>
+			<p>Price Per Night: {{city.hotelPricingInfo.originalPricePerNight}}</p>
+			<p>Hotel Average Score: {{city.hotelScores.rawAppealScore}}</p>
+			<p>Hotel Moving Score: {{city.hotelScores.movingAverageScore}}</p>
+		</li>
+	</ul>
 </div>
