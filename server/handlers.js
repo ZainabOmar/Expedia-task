@@ -8,8 +8,9 @@ module.exports = {
 		.then((data) => {
 			var array = data.offers.Hotel;
 			var result = [];
+			console.log(array)
 			for (var i = 0; i < array.length; i++) {
-				result.push(array[i].destination.longName);
+				result.push(array[i].destination.city);
 			}
 			res.json(result)
 		})

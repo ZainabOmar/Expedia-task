@@ -5,9 +5,9 @@ angular.module('expedia.main', [])
   $scope.message = "Hello world";
   
   Expedia.getByDestination()
-  .then(function(data){
-  	console.log(data)
-    $scope.data = data;
+  .then(function(result){
+  	console.log(result.data)
+    $scope.data = result.data;
   })
 
 })

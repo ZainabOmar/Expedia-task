@@ -1,5 +1,5 @@
-<div id="container" ng-controller="MainController">
-<h1><center>Welcome To Expedia Website</center></h1>
-<h3>Filter By Destination <span class="glyphicon glyphicon-hand-right"></span></h3>
-<p>{{data}}</p>
+<div class="container" ng-controller="MainController">
+	<h1><center>Welcome To Expedia Website</center></h1>
+	<h3 ng-model = "getByDestination()">Filter By Destination <span class="glyphicon glyphicon-hand-right"></span></h3>
+	<p ng-repeat = "city in data track by $index">{{city}}</p>
 </div>

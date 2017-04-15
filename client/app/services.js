@@ -9,7 +9,6 @@ angular.module('expedia.services', [])
         url: '/api/getByDestination',
       })
       .then(function (res) {
-        console.log(res.offers);
         return res;
       })
       .catch(function(err){
