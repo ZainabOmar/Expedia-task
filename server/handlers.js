@@ -21,7 +21,7 @@ module.exports = {
 		.then((data) => {
 			var array = data.offers.Hotel;
 			var result = "";
-				result = Math.min(...array)
+			// result = Math.min(...array)
 		})
 		.catch(err => console.error(err));
 	}
