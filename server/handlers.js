@@ -26,13 +26,10 @@ module.exports = {
 			var array = data.offers.Hotel;
 			var result = [];
 			for (var i = 0; i < array.length; i++) {
-				console.log( array[i]["offerDateRange"]["lengthOfStay"] )
 				if(parseInt(req.body.length) === array[i]["offerDateRange"]["lengthOfStay"]) {
-					console.log("here")
 					result.push(array[i])
 				}
 			}
-			// console.log(result)
 			res.json(result)
 		})
 		.catch(err => console.error(err));
