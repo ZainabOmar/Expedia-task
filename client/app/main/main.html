@@ -1,10 +1,11 @@
 <div class="container" ng-controller = "MainController">
 	<h1><center>Welcome To Expedia Website</center></h1>
-	<h3>Which City Are You Looking For?! </h3>
-	<label for="city">City Name:</label>
+	<h3>Filter Here </h3>
+	<label for="city">Search By City</label> <span class="glyphicon glyphicon-hand-down"></span>
 	<br>
 	<input type="text" placeholder="city name" ng-model = "destination.city">
-	<input type="submit" value="Search" ng-click="search()">
+	<br><br>
+	<input type="submit" value="Search" ng-click="searchByCity()">
 	<ul>
 		<li ng-repeat = "city in data track by $index">
 			<p>City: {{city.destination.city}}</p>
@@ -23,6 +24,31 @@
 			<p>Price Per Night: {{city.hotelPricingInfo.originalPricePerNight}}</p>
 			<p>Hotel Average Score: {{city.hotelScores.rawAppealScore}}</p>
 			<p>Hotel Moving Score: {{city.hotelScores.movingAverageScore}}</p>
+		</li>
+	</ul>
+	<label for="length">Search By Length Of Stay</label> <span class="glyphicon glyphicon-hand-down"></span>
+	<br>
+	<input type="text" placeholder="length of stay" ng-model = "length.length">
+	<br><br>
+	<input type="submit" value="Search" ng-click="searchByLength()">
+	<ul>
+		<li ng-repeat = "obj in data track by $index">
+			<p>City: {{obj.destination.city}}</p>
+			<p>Country: {{obj.destination.country}}</p>
+			<p>Travel Start Date: {{obj.offerDateRange.travelStartDate}}</p>
+			<p>Travel End Date: {{obj.offerDateRange.travelEndDate}}</p>
+			<p>Length Of Stay: {{obj.offerDateRange.lengthOfStay}}</p>
+			<p>Hotel Name: {{obj.hotelInfo.hotelName}}</p>
+			<center><img ng-src= {{obj.hotelInfo.hotelImageUrl}} alt="Description" /></center>
+			<p>Hotel Destination: {{obj.hotelInfo.hotelLongDestination}}</p>
+			<p>Hotel Address: {{obj.hotelInfo.hotelStreetAddress}}</p>
+			<p>Hotel City: {{obj.hotelInfo.hotelCity}}</p>
+			<p>Hotel Province: {{obj.hotelInfo.hotelProvince}}</p>
+			<p>Description: {{obj.hotelInfo.description}}</p>
+			<p>Total Price: {{obj.hotelPricingInfo.totalPriceValue}}</p>
+			<p>Price Per Night: {{obj.hotelPricingInfo.originalPricePerNight}}</p>
+			<p>Hotel Average Score: {{obj.hotelScores.rawAppealScore}}</p>
+			<p>Hotel Moving Score: {{obj.hotelScores.movingAverageScore}}</p>
 		</li>
 	</ul>
 </div>

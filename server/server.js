@@ -6,8 +6,8 @@ var app = express();
 
 require('./middleware.js')(app, express);
 
-app.post('/api/getByDestination', handlers.getByDestination);
-// app.get('/api/getMinTripStartDate', handlers.getMinTripStartDate);
+app.post('/api/getByCity', handlers.getByCity);
+app.post('/api/getByLengthOfStay', handlers.getByLengthOfStay);
 
 app.listen(port, function() {
     console.log("App is running on port " + port);
