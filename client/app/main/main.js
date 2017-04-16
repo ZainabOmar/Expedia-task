@@ -25,4 +25,26 @@ angular.module('expedia.main', [])
 			console.error(error);
 		});
 	}
+
+	$scope.getMaxStarRating = function () {
+		Expedia.maxStarRating()
+		.then (function (result) {
+			console.log(result.data)
+			$scope.data = result.data
+		})
+		.catch(function (error) {
+			console.error(error);
+		});
+	}
+
+	$scope.getMinStarRating = function () {
+		Expedia.minStarRating()
+		.then (function (result) {
+			console.log(result.data)
+			$scope.data = result.data
+		})
+		.catch(function (error) {
+			console.error(error);
+		});
+	}
 });

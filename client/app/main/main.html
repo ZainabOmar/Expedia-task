@@ -51,4 +51,15 @@
 			<p>Hotel Moving Score: {{obj.hotelScores.movingAverageScore}}</p>
 		</li>
 	</ul>
+	<br>
+	<p ng-click = "getMaxStarRating()"><strong>Get Maximum Star Rating</strong><span class="glyphicon glyphicon-hand-right"></span></p>
+	<ul>
+		<li>Rating: {{data[0]}}</li>
+		<li>Hotel Name: {{data[1]}}</li>
+	</ul>
+	<p ng-click = "getMinStarRating()"><strong>Get Minimum Star Rating</strong><span class="glyphicon glyphicon-hand-right"></span></p>
+	<ul>
+		<li>Rating: {{data[0]}}</li>
+		<li>Hotel Name: {{data[1]}}</li>
+	</ul>
 </div>

@@ -6,6 +6,9 @@ var app = express();
 
 require('./middleware.js')(app, express);
 
+app.get('/api/maxStarRating', handlers.maxStarRating);
+app.get('/api/minStarRating', handlers.minStarRating);
+
 app.post('/api/getByCity', handlers.getByCity);
 app.post('/api/getByLengthOfStay', handlers.getByLengthOfStay);
 
