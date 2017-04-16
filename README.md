@@ -4,7 +4,7 @@
 Built this simple website Using AngularJs for the front-end and NodeJs and ExpressJs for the back-end, to show data as described in the "ABOUT.md" file.
 
 ## Installation:  
-1- First, Go to this website "" and fork the repo.
+1- First, Go to this website "https://github.com/ZainabOmar/Expedia-task" and fork the repo.
 
 2- Now from your account, clone the repo into your local PC.
 
@@ -12,7 +12,8 @@ Built this simple website Using AngularJs for the front-end and NodeJs and Expre
    -git add .
    -git commit -m ""
    -git push origin master
- and finally make pull request.
 
 Link to heroku:
 "https://expedia-task-offers.herokuapp.com"
+
+Please show any criticism if there is any.
